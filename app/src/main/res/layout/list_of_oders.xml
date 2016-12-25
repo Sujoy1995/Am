@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="horizontal">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/food_all"
+android:textColor="@color/custom4"
+            android:layout_weight="500"
+            android:paddingLeft="5dp"
+            />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/cost"
+        android:textColor="@color/custom4"
+
+
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/qtyprice"
+        android:textColor="@color/custom4"
+
+
+        />
+</LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:id="@+id/display_total"
+    android:layout_above="@+id/order_button"
+    android:layout_alignParentStart="true"
+    android:text="lhkjg"
+    android:textSize="25sp"
+   />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+   android:layout_centerHorizontal="true"
+    android:text="Order"
+    android:id="@+id/order_button"
+    android:onClick="order"
+ />
+
+</RelativeLayout>

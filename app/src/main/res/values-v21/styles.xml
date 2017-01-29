@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="contact" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/legacy_primary</item>
+        <item name="android:colorPrimaryDark">@color/legacy_primary_dark</item>
+        <item name="colorPrimary">@color/legacy_primary</item>
+        <item name="colorPrimaryDark">@color/legacy_primary</item>
+        <item name="colorAccent">@color/legacy_primary_dark</item>
+    </style>
+</resources>

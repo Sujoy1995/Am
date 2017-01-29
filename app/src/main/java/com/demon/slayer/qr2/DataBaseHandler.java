@@ -38,7 +38,7 @@ public class DataBaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_FOODS + "("
                 + KEY_ID + "AUTOINCREMENT" + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_COST + " TEXT" +KEY_QTYP + " TEXT" + ")";
+                + KEY_COST + " TEXT," + KEY_QTYP + " TEXT" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
 
             String CREATE_TABLE = "CREATE TABLE " + TABLE_TABLE + "(" + KEY_TABLE + " TEXT" + ")";
@@ -115,9 +115,18 @@ public class DataBaseHandler extends SQLiteOpenHelper {
         // return contact list
         return foodList;
     }
+public int countRows()
+{
+    String countQuery = "SELECT * FROM " + TABLE_FOODS;
+    SQLiteDatabase db = this.getReadableDatabase();
+    Cursor cursor = db.rawQuery(countQuery, null);
+    int cnt = cursor.getCount();
+    cursor.close();
+    return cnt;
 
+}
     public int addCost() {
-        String selectQuery = "SELECT SUM(qtyp) FROM " + TABLE_FOODS;
+        String selectQuery = "SELECT SUM("+KEY_QTYP+") FROM " + TABLE_FOODS;
         int total = 0;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

@@ -13,5 +13,13 @@
         <item name="android:windowNoTitle">false</item>
     </style>
 
+    <style name="contact" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/legacy_primary</item>
+        <item name="colorPrimaryDark">@color/legacy_primary</item>
+        <item name="colorAccent">@color/legacy_primary_dark</item>
+    </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/background_splash</item>
+    </style>
 </resources>

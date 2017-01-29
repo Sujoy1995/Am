@@ -7,6 +7,8 @@
     <color name="custom1">#ffffff</color>
     <color name="custom3">#c16060</color>
     <color name="custom4">#0e0e0e</color>
+    <color name="legacy_primary">#a8dd16</color>
+    <color name="legacy_primary_dark">#eee308</color>
 
 
 </resources>

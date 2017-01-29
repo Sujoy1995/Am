@@ -35,29 +35,24 @@ public class fragment1 extends Fragment {
     RequestQueue requestQueue;
 
 
-    String url = "http://192.168.1.106/menu.php";
+    String url = "http://test.amylife.in/menu.php";
     RecyclerView recyclerView;
     CardView cardView;
     RecyclerView.LayoutManager layoutManager;
 
     CustomAdapter adapter;
     List<MyData> data_list;
-  //  private static final String TAG = "MyActivity";
+    //  private static final String TAG = "MyActivity";
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
-
         data_list=new ArrayList<>();
         load_from_server();
-
-
     }
 
     private void load_from_server() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-
-
             @Override
             public void onResponse(String response) {
                 try {
@@ -65,7 +60,7 @@ public class fragment1 extends Fragment {
                     JSONArray foods = jsonObject.getJSONArray("menu");
                     for (int i = 0; i < foods.length(); i++) {
                         JSONObject food = foods.getJSONObject(i);
-                       MyData data=new MyData(food.getString("name"),food.getString("price"),food.getString("description"),food.getString("id"));
+                        MyData data=new MyData(food.getString("name"),food.getString("price"),food.getString("description"),food.getString("id"));
                         data_list.add(data);
                     }
                     adapter.notifyDataSetChanged();
@@ -86,8 +81,7 @@ public class fragment1 extends Fragment {
             @Override   //getParams Method
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> parameters = new HashMap<String, String>();
-
-                parameters.put("foodid", "1");
+                parameters.put("catid","1");
                 return parameters;
             }
         };
@@ -99,7 +93,7 @@ public class fragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.frag1, container, false);
-       // re=(EditText) root.findViewById(R.id.menuVeg);
+        // re=(EditText) root.findViewById(R.id.menuVeg);
         recyclerView=(RecyclerView) root.findViewById(R.id.rv1);
         layoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);

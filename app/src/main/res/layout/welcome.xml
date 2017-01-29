@@ -26,16 +26,48 @@
         android:id="@+id/pager"
         android:layout_below="@+id/tab"
         android:layout_centerHorizontal="true" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:src="@android:drawable/ic_dialog_email"
-        android:layout_marginLeft="@dimen/fab_margin"
-        android:layout_marginRight="@dimen/fab_margin"
-        android:layout_marginEnd="47dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="47dp" />
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/frameLayout">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@android:drawable/ic_dialog_email"
+            android:layout_marginLeft="@dimen/fab_margin"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginEnd="47dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="47dp" />
+
+        <TextView
+            android:id="@+id/textBadge"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:background="@drawable/badge_circle"
+           android:elevation="7dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal|top" />
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
 </RelativeLayout>

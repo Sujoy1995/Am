@@ -2,88 +2,93 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/custom3">
+    android:background="@color/custom3"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+       android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/food_display"
-            android:layout_width="310dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:text="dsa"
-android:textSize="22dp"
-            android:textAllCaps="true"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/qty"
-            android:layout_width="wrap_content"
-android:textSize="20dp"
-            android:layout_height="25dp"
-            android:layout_weight="1"
-            android:text="1"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-
-        >
-
-            </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-
-        >
-        <Button
-            android:id="@+id/plus"
-            android:layout_width="80dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
 
-            android:text="+"
 
-            />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/minus"
-            android:layout_width="80dp"
+            <TextView
+                android:id="@+id/food_display"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:text="dsa"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/qty"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:text="1"
+                android:textColor="#000000"
+
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:text="-"
+            android:layout_marginTop="20dp"
 
-            />
+            >
 
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/confirm"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:gravity="center"
-            android:text="Confirm" />
+            android:layout_marginTop="20dp"
 
-        <Button
-            android:id="@+id/cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-           android:layout_marginBottom="5dp"
-            android:text="Cancel" />
+            android:orientation="horizontal"
+
+            >
+
+            <Button
+                android:id="@+id/plus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+
+                android:text="+"
+
+                />
+
+            <Button
+                android:id="@+id/minus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="-"
+
+                />
+
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Confirm" />
+
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

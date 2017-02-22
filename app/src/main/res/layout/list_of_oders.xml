@@ -3,10 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Summary"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/food_icon"
+        android:layout_marginTop="20dp"/>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
+android:layout_marginTop="130dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
     android:orientation="horizontal">
         <EditText
             android:layout_width="match_parent"
@@ -43,11 +59,12 @@ android:textColor="@color/custom4"
     android:textSize="25sp"
    />
 <Button
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
    android:layout_centerHorizontal="true"
     android:text="Order"
+    android:background="@color/colorAccent"
     android:id="@+id/order_button"
     android:onClick="order"
  />

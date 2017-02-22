@@ -69,8 +69,6 @@ badge=(TextView)findViewById(R.id.textBadge);
                         }
         });
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
-
-
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
@@ -86,7 +84,7 @@ badge=(TextView)findViewById(R.id.textBadge);
                 viewPager.setCurrentItem(tab.getPosition());
             }
         });
-        
+
     }
 
     @Override
@@ -125,7 +123,6 @@ badge=(TextView)findViewById(R.id.textBadge);
         }
 
     }
-
     private void callForAssistance() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
@@ -165,29 +162,27 @@ badge=(TextView)findViewById(R.id.textBadge);
 
 
     private class CustomAdapter extends FragmentPagerAdapter {
-        private String fragments []= {"Soup","Veg Starter","Non-veg Starter","Pasta","Beverages"};
+        private String fragments []= {"Soup","veg-starter","non-veg starter","Pasta","drinks"};
         public CustomAdapter(FragmentManager supportFragmentManager, Context applicationContext) {
             super(supportFragmentManager);
         }
 
         @Override
-        public Fragment getItem(int position)
-        {
-         switch (position)
-         {
-             case 0:
-                 return new fragment1();
-             case 1:
-                 return new fragment2();
-             case 2:
-                 return new fragment3();
-             case 3:
-                 return  new fragment4();
-             case 4:
-                 return  new fragment5();
-             default:
-                 return null;
-         }
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new fragment1();
+                case 1:
+                    return new fragment2();
+                case 2:
+                    return new fragment3();
+                case 3:
+                    return new fragment4();
+                case 4:
+                    return new fragment5();
+                default:
+                    return null;
+            }
         }
 
         @Override

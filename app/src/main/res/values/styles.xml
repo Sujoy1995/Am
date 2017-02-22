@@ -3,7 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:dialogTheme">@style/CustomDialog</item>
@@ -18,6 +18,8 @@
         <item name="colorPrimaryDark">@color/legacy_primary</item>
         <item name="colorAccent">@color/legacy_primary_dark</item>
     </style>
+    <style name="status" parent="Theme.AppCompat.Light.NoActionBar" >
+        </style>
 
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@drawable/background_splash</item>

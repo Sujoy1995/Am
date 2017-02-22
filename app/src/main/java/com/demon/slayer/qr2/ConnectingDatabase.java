@@ -51,12 +51,13 @@ EditText qtyp;
 
         dis.setEnabled(false);
 l.setEnabled(false);
+        qtyp.setEnabled(false);
         dis_total=(TextView) findViewById(R.id.display_total);
         dis_total.setText("Total Cost is "+db.addCost());
     }
 public void order(View v){
-    Toast.makeText(getApplicationContext(), "Order Placed", Toast.LENGTH_SHORT).show();
-    Intent pay=new Intent(getApplicationContext(),Payment.class);
+    Toast.makeText(getApplicationContext(), "Order Sent", Toast.LENGTH_SHORT).show();
+    Intent pay=new Intent(getApplicationContext(),Status.class);
     startActivity(pay);
 
     }

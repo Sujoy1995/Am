@@ -97,7 +97,7 @@ public class fragment1 extends Fragment {
         recyclerView=(RecyclerView) root.findViewById(R.id.rv1);
         layoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
-        adapter=new CustomAdapter(getActivity().getApplicationContext(),data_list);
+        adapter=new CustomAdapter(getContext(),data_list);
         recyclerView.setAdapter(adapter);
 
         return root;

@@ -19,6 +19,10 @@
         <activity android:name=".ConnectingDatabase"></activity>
         <activity android:name=".Welcome"></activity>
         <activity android:name=".Payment"></activity>
+
+        <activity android:name=".ebill"></activity>
+        <activity android:name=".Status"
+            android:theme="@style/status"></activity>
         <activity android:name=".WbViewAct"></activity>
         <activity android:name=".ContactUs">
         </activity>

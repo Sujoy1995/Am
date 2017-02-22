@@ -82,7 +82,7 @@ public class fragment5 extends Fragment {
             @Override   //getParams Method
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> parameters = new HashMap<String, String>();
-                parameters.put("catid", "24");
+                parameters.put("catid","24");
                 return parameters;
             }
         };

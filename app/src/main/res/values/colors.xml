@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#ad0c42</color>
-    <color name="colorPrimaryDark">#7c042c</color>
-    <color name="colorAccent">#cb074a</color>
+    <color name="colorPrimaryDark">#2962ff</color>
+    <color name="colorAccent">#40b0ff</color>
     <color name="custom">#b3164a</color>
     <color name="custom1">#ffffff</color>
-    <color name="custom3">#c16060</color>
+    <color name="custom3">#ffffff</color>
     <color name="custom4">#0e0e0e</color>
     <color name="legacy_primary">#a8dd16</color>
     <color name="legacy_primary_dark">#eee308</color>
+    <color name="nlue">#0d47a1</color>
 
 
 </resources>

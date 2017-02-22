@@ -95,9 +95,9 @@ public class fragment3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.frag1, container, false);
+        View root = inflater.inflate(R.layout.frag2, container, false);
         // re=(EditText) root.findViewById(R.id.menuVeg);
-        recyclerView=(RecyclerView) root.findViewById(R.id.rv1);
+        recyclerView=(RecyclerView) root.findViewById(R.id.rv2);
         layoutManager=new LinearLayoutManager(getActivity().getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
         adapter=new CustomAdapter(getActivity().getApplicationContext(),data_list);

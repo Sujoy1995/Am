@@ -34,7 +34,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     Context context;
 DataBaseHandler db;
-   static  List<MyData> my_data;
+    List<MyData> my_data;
     int incre=1;
     SharedPreferences prefs;
 
@@ -94,9 +94,9 @@ DataBaseHandler db;
                 minus.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
-                        incre--;
-                        pqty.setText(""+incre);
+                        if(incre>1)
+                        { incre--;
+                        pqty.setText(""+incre);}
                                             }
                 });
              /*   dialogButtonCancel.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +108,12 @@ DataBaseHandler db;
                 dialogButtonConfirm.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        /*if(incre<0)
+                        {
+                            Toast.makeText(context,"Quantity should be atleast 1", Toast.LENGTH_SHORT).show();
+
+                        }
+                        else {*/
                         prefs = PreferenceManager
                                 .getDefaultSharedPreferences(context);
                         phoneNo = prefs.getString("phno", null);
@@ -116,7 +122,7 @@ DataBaseHandler db;
                         send_data_to_server(my_data.get(position).foodname,my_data.get(position).getFood_id());
                        Welcome.badge.setVisibility(View.VISIBLE);
                         Welcome.badge.setText(""+db.countRows());
-/*
+/*}
                         welcome.badge.setText(""+db.countRows());
 */
                         dialog.dismiss();
@@ -153,10 +159,7 @@ final table t=db.getTable();
                 try {
                     JSONObject jsonObject= new JSONObject(response.toString());
                     Toast.makeText(context,jsonObject.getString("status")+jsonObject.getString("tableid")+jsonObject.getString("id"), Toast.LENGTH_SHORT).show();
-
-
-
-                } catch (JSONException e) {
+} catch (JSONException e) {
                     e.printStackTrace();
                 }
 
@@ -201,10 +204,5 @@ final table t=db.getTable();
 
         }
     }
-/*public static void setFilter(List<MyData> newList)
-{
-    my_data=new ArrayList<>();
-    my_data.add((MyData) newList);
-    CustomAdapter.notifyDataSetChanged();
-}*/
+
 }
